@@ -1,15 +1,7 @@
 function takeANumber(line, name) {
-  if (!line.length) {
-    return "The line is currently empty."
-  }
+  line.push(name)
 
-  const numbersAndNames = []
-
-  for (let i = 0, l = line.length; i < l; i++) {
-    numbersAndNames.push(`${i + 1}. ${line[i]}`)
-  }
-
-  return `The line is currently: ${numbersAndNames.join(', ')}`
+  return `Welcome, ${name}. You are number ${line.length} in line.`
 }
 function nowServing(katzDeliLine) {
   if(katzDeliLine.length < 1) {return 'There is nobody waiting to be served!';}
